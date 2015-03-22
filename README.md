@@ -36,7 +36,7 @@ and perform the following transformations:
  2. Rename columns with features names previously loaded (requirement
 4)
  3. Add a subject columns (will be used later), from `s_*` file
- 4. Add an activity lable columns from previously, from `y_*` file
+ 4. Add an activity label columns from previously, from `y_*` file
 
 Both tables are processed the same way (could have used a function
 with table's names as input, instead of duplicating code).
