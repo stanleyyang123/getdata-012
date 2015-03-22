@@ -11,7 +11,7 @@ From the data set available here :
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
- You should create one R script called run_analysis.R that does the following.
+You should create one R script called run_analysis.R that does the following.
  1. Merges the training and the test sets to create one data set.
  2. Extracts only the measurements on the mean and standard deviation for each measurement.
  3. Uses descriptive activity names to name the activities in the data set
@@ -30,7 +30,7 @@ into their name, in order to only keep the columns we are interested
 from the data sets (as specified in step 2).
 
 Then we load both sets of data (training, and test). For both sets, we
-load the 3 table (`x_`, `s_` and `y_` prefixes). Data is in the `x_`
+load the 3 tables (`x_`, `s_` and `y_` prefixes). Data is in the `x_`
 and perform the following transformations:
  1. Subset columns with the features we are interested in
  2. Rename columns with features names previously loaded (requirement
@@ -49,7 +49,7 @@ things were not done in the same order). Data is stored into `dataset` variable.
 We then create the independent `tidyset` that holds the mean per
 subject and activity.
 
-Finally columns names are chaneg a little bit in order to have a more
+Finally columns names are changed a little bit in order to have a more
 consistent namins scheme. We replace `mean` and `std` by their
 capitalized version and remove parenthesis in column names.
 
