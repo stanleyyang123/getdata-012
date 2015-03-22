@@ -25,18 +25,18 @@ The script is called run_annalysis.R and has the following step (fully
 commented in the code)
 
 We first load the features and activity labels that are stored into
-their own file. Using grep, we keep only labels that have mean or std
+their own file. Using `grep`, we keep only labels that have `mean` or `std`
 into their name, in order to only keep the columns we are interested
 from the data sets (as specified in step 2).
 
 Then we load both sets of data (training, and test). For both sets, we
-load the 3 table (`x_`, `s_` and `y_` prefixes) and do the following
-transformations:
+load the 3 table (`x_`, `s_` and `y_` prefixes). Data is in the `x_`
+and perform the following transformations:
  1. Subset columns with the features we are interested in
  2. Rename columns with features names previously loaded (requirement
 4)
- 3. Add a subject columns (will be used later)
- 4. Add an activity lable columns from previously
+ 3. Add a subject columns (will be used later), from `s_*` file
+ 4. Add an activity lable columns from previously, from `y_*` file
 
 Both tables are processed the same way (could have used a function
 with table's names as input, instead of duplicating code).
@@ -53,7 +53,8 @@ Finally columns names are chaneg a little bit in order to have a more
 consistent namins scheme. We replace `mean` and `std` by their
 capitalized version and remove parenthesis in column names.
 
-Both data sets are save to a file.
+Both data sets are save to a file: `dataset.txt` and `tidyset.txt`
+(this is the one that answers requirement 5).
 
 
 
